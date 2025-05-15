@@ -8,15 +8,30 @@
 </head>
 <body>
 <div class="contenedor">
-    <h2> USUARIO </h2>
+    <h2 style="color:rgb(8, 11, 11);"> Usuario </h2>
     <form method="post"> 
-        <button> REGISTRAR 
+       
+        <input type="text" placeholder="Ingrese su nombre" name="nombre"> 
+        <input type="email" placeholder="Ingrese su email" name="correo"> 
+        <button> Registrar 
         </button> 
-        <input type="text" placeholder="Ingrese su nombre" name="nombre"> </input>
-        <input type="email" placeholder="Ingrese su email" name="correo"> </input>
-
     </form>
     <table>
+        <tr>
+            <th>id</th>
+            <th>nombre usuario</th>
+            <th>correo</th>
+            <th>acciones</th>
+
+        </tr>
+        {% for persona in usuario  %}
+        <tr>
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.nombre }}</td>
+            <td>{{ persona.correo }}</td>
+            <td> <a href="/?eliminar={{ persona.id}}">eliminar</a></td>
+        </tr>
+        {% endfor  %}
 
     </table>
 
