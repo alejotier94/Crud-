@@ -11,8 +11,8 @@
     <h2 style="color:rgb(8, 11, 11);"> Usuario </h2>
     <form method="post"> 
        
-        <input type="text" placeholder="Ingrese su nombre" name="nombre"> 
-        <input type="email" placeholder="Ingrese su email" name="correo"> 
+        <input type="text" placeholder="Ingrese su nombre" name="nombre"required> 
+        <input type="email" placeholder="Ingrese su email" name="correo"required> 
         <button> Registrar 
         </button> 
     </form>
@@ -29,7 +29,11 @@
             <td>{{ persona.id }}</td>
             <td>{{ persona.nombre }}</td>
             <td>{{ persona.correo }}</td>
-            <td> <a href="/?eliminar={{ persona.id}}">eliminar</a></td>
+            <td>
+                 <a href="">editar</a>
+                 <a href="/?eliminar={{ persona.id}}">eliminar</a>
+            </td>
+            
         </tr>
         {% endfor  %}
 
