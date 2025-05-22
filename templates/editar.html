@@ -10,16 +10,17 @@
 <div class="contenedor">
     <h2 style="color:rgb(8, 11, 11);"> Usuario a editar </h2>
     <form method="post"> 
-       
-        <input type="text" placeholder="Ingrese su nombre" name="nombre"required> 
-        <input type="email" placeholder="Ingrese su email" name="correo"required> 
-        <button> Registrar 
-        </button> 
+        <input type ="number" name="id" value="{{usuario_a_editar.id}}" readonly>
+        <input type="text" placeholder="Ingrese su nombre" name="nombre" value= "{{usuario_a_editar.nombre}}" required> 
+        <input type="email" placeholder="Ingrese su email" name="correo" value= "{{usuario_a_editar.correo}}" required> 
+        <button> Actualizar usuario </button> 
     </form>
 
-    
-
-
+    <button style="margin-top:10px; background-color:green; color:white">
+        <a href="/" style="color:white; text-decoration:none">
+            Regresar al home
+        </a>
+    </button>
 
 
 </div>
